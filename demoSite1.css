@@ -1,0 +1,36 @@
+body {
+	font-family: 'Segoe Script';
+}
+
+header {
+	color: red;
+    text-align: center;
+    border: 50px solid #000000;
+    border-radius: 20px 20px 0px 0px;
+    opacity: .5;
+}
+		
+p {
+    color: #6B4400;
+	text-align: left;
+	margin-left: 20px;
+	font-family: sans-serif, Arial, 'Myriad Pro';
+}
+
+div {
+    position: fixed;
+    top: 8px;
+    z-index: -1;
+    opacity: .5;
+}
+
+div2 > h3 {
+    background-color: #900;
+}
+
+footer {
+    color: black;
+    text-align: left;
+    margin-left: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
