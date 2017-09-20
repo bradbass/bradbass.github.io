@@ -9,6 +9,7 @@ body {
     font-family: 'Play', sans-serif;
     margin-left: 0px;
     margin-right: 0px;
+    opacity: 0.9;
 }
 
 header {
@@ -23,6 +24,7 @@ header {
 html {
     width: 1000px;
     margin: auto;
+    background-image: url("bg.jpg");
 }
 
 h1 {
