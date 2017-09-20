@@ -28,12 +28,12 @@ div2 > h3 {
     background-color: #900;
 }
 
-footer {
+/* footer {
     color: black;
     text-align: left;
     margin-left: 50px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
+} */
 
 #griddemo {
     display: -ms-grid;
@@ -83,6 +83,6 @@ footer {
     background: #0ff;
     width: 150px;
     height: 200px;
-    float: left;
+    /* float: left; */
     margin: 20px;
 }
