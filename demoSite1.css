@@ -1,35 +1,32 @@
 a {
     text-decoration: none;
-    color: lightgreen;
+    color: #5EBC60;
 }
 
 body {
     background-color: rgb(40, 40, 40);
     color: #AAAAAA;
     font-family: 'Play', sans-serif;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 header {
     background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 2.5em;
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: 0px;
+    margin-right: 0px;
     padding-left: 20px;
 }
 
 h1 {
     padding-bottom: 20px;
-}
-
-h2 {
-
+    margin-left: 30px;
 }
 
 h3 {
-    color: lightgreen;
+    color: #5EBC60;
 }
 
 hr {
@@ -46,7 +43,7 @@ nav > a {
 }
 
 nav > a:active {
-    color: lightgreen;
+    color: #5EBC60;
 }
 
 nav {
@@ -64,8 +61,8 @@ footer {
     text-align: left;
     font-size: 0.4em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: 0px;
+    margin-right: 0px;
     padding-left: 20px;
     padding-top: 4px;
 }
@@ -84,17 +81,47 @@ footer {
 }
 
 #addressinfoh3 {
-    color: lightgreen;
+    color: #5EBC60;
     font-size: 2.5em;
 }
 
+#contactflexbox {
+    display: flex;
+    flex-direction: column;
+    line-height: 2px;
+}
+
+#contactformaside {
+    float: right;
+    position: relative;
+    right: 100px;
+    width: 400px;    
+}
+
 #contactheading {
-    color: lightgreen;
-    font-size: 2em;
+    color: #5EBC60;
+    font-size: 2.5em;
 }
 
 #contactinfo {
     line-height: 0.5px;
+}
+
+#contactinfosection {
+    margin-left: 20px;
+    margin-bottom: 200px;
+}
+
+#contactsubmitbtn {
+    background-color: #5EBC60;
+    border-color: #5EBC60;
+    width: 100px;
+}
+
+#cvaside {
+    position: relative;
+    float: right;
+    margin-right: 20px;
 }
 
 #email {
@@ -111,14 +138,94 @@ footer {
     border-radius: 10px;
 }
 
+#homeaside {
+    line-height: 2px;
+    position: relative;
+    float: right;
+    margin-right: 20px;
+}
+
+#homebody {
+    background-color: #616161;
+    border-radius: 10px;
+    padding: 30px 2px 100px 30px;
+    /* color: white; */
+    position: relative;
+    bottom: 40px;
+}
+
+#homeemail {
+    text-decoration: underline;
+    color: #AAAAAA;
+}
+
+#homeimage {
+    float: left;
+    margin-right: 20px;
+}
+
+#homepagearticle {
+    position: relative;
+    top: -20px;
+    margin-right: 200px;
+}
+
+#mainbodyhome {
+    width: 650px;
+    margin-left: 20px;
+}
+
 #surname {
     color: black;
 }
 
 #smallheadingtext {
-    font-size: 0.3em;
+    font-size: 0.25em;
+}
+
+.code {
+    color: #5EBC60;
+}
+
+.cvsidebar {
+    line-height: 6px;
+}
+
+.forminput {
+    background-color: #525252;
+    border: none;
+}
+
+.greenlabel {
+    color: #5EBC60;
+}
+
+.hometable {
+    width: 900px;
+    position: relative;
+    margin-bottom: 40px;
+    margin-left: 20px;
+}
+
+.hometable th {
+    color: #5EBC60;
+    text-align: left;
+}
+
+.hometable td {
+    font-size: 0.9em;
+    width: 100px;
+}
+
+.hometable tr {
+    height: 10px;
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
 }
 
 .nav:hover {
-    color: lightgreen;
+    color: #5EBC60;
 }

@@ -25,9 +25,28 @@
             <a href="contact.html" id="contact" class="nav">CONTACT</a>
         </nav>
 
-        <section>
+        <aside id="contactformaside">
+            <section>
+                <form id="contactform">
+                    <div id="contactflexbox">
+                        <h4>Looking forward to hearing from you.</h4>
+                        <input type="text" placeholder="Name" id="contactname" class="forminput">
+                        <br>
+                        <input type="email" placeholder="Email" id="contactemail" class="forminput">
+                        <br>
+                        <input type="text" placeholder="Subject" id="contactsubject" class="forminput">
+                        <br>
+                        <textarea rows="10" maxlength="200" placeholder="Message" id="contactmsg" class="forminput"></textarea>
+                        <br>
+                        <button onclick="submitcontact()" id="contactsubmitbtn">Submit</button>
+                    </div>
+                </form>
+            </section>
+        </aside>
+
+        <section id="contactinfosection">
             <article id="contactinfo">
-                <h1 id="contactheading">CONTACT</h1>
+                <h2 id="contactheading">CONTACT</h2>
                 <br>
                 <h3 style="color: lightgreen">Brad Bass</h3>
                 <br>
@@ -35,23 +54,10 @@
                 <h5>Email: <a href="mailto:brad.bass@hotmail.ca">brad.bass@hotmail.ca</a></h5>
                 <h5>Phone: 647-781-7054</h5>
             </article>
-        </section>
-
-        <aside>
-            <section>
-                <form action="submitcontact">
-                    <h4>Looking forward to hearing from you.</h4>
-                    <input type="text" placeholder="Name" id="contactname">
-                    <input type="email" placeholder="Email" id="contactemail">
-                    <input type="text" placeholder="Subject" id="contactsubject">
-                    <input type="text" placeholder="Message" id="contactmsg">
-                    <input type="submit">
-                </form>
-            </section>
-        </aside>
+        </section>        
         
         <footer>
-                <h1>by Brad Bass 2017</h1>
+                <h1>&copy 2017 by Brad Bass</h1>
         </footer>
         
     </body>
