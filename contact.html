@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script type="text/javascript" src="Scripts.js"></script>
+        <meta charset="utf-8"/>
+        <title>This is a title.</title>
+        <link type="text/css" href="demoSite1.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+        <style>
+            #contact {color: lightgreen;}
+        </style>
+    </head>
+
+    <body>
+        
+        <header>
+            <h1>
+                <span id="firstname">Brad</span> <span id="surname">Bass</span> <span id="smallheadingtext"><sup>tester/developer for hire</sup></span>
+            </h1>
+        </header>
+
+        <nav>
+            <a href="index.html" id="home" class="nav">HOME</a>|
+            <a href="cv.html" id="cv" class="nav">CV</a>|
+            <a href="contact.html" id="contact" class="nav">CONTACT</a>
+        </nav>
+
+        <section>
+            <article id="contactinfo">
+                <h1 id="contactheading">CONTACT</h1>
+                <br>
+                <h3 style="color: lightgreen">Brad Bass</h3>
+                <br>
+                <h5>Address: North York, ON</h5>
+                <h5>Email: <a href="mailto:brad.bass@hotmail.ca">brad.bass@hotmail.ca</a></h5>
+                <h5>Phone: 647-781-7054</h5>
+            </article>
+        </section>
+
+        <aside>
+            <section>
+                <form action="submitcontact">
+                    <h4>Looking forward to hearing from you.</h4>
+                    <input type="text" placeholder="Name" id="contactname">
+                    <input type="email" placeholder="Email" id="contactemail">
+                    <input type="text" placeholder="Subject" id="contactsubject">
+                    <input type="text" placeholder="Message" id="contactmsg">
+                    <input type="submit">
+                </form>
+            </section>
+        </aside>
+        
+        <footer>
+                <h1>by Brad Bass 2017</h1>
+        </footer>
+        
+    </body>
+</html>

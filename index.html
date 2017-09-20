@@ -1,100 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script type="text/javascript" src="Scripts.js"></script>
-	<meta charset="utf-8"/>
-    <title>This is a title.</title>
-    <link type="text/css" href="demoSite1.css" rel="stylesheet">
-	<style>
+    <head>
+        <script type="text/javascript" src="Scripts.js"></script>
+        <meta charset="utf-8"/>
+        <title>This is a title.</title>
+        <link type="text/css" href="demoSite1.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+        <style>
+            #home {color: lightgreen;}
+        </style>
+    </head>
 
-	</style>
-</head>
-
-<body>
-    
-    <header>
+    <body>
         
-    </header>
+        <header>
+            <h1>
+                <span id="firstname">Brad</span> <span id="surname">Bass</span> <span id="smallheadingtext"><sup>tester/developer for hire</sup></span>
+            </h1>
+        </header>
 
-    <nav>
-        <a href="HTML.html">CV</a>
-        <a href="page3.html">Contact</a>
-    </nav>
-
-	<p>This is a paragraph.</p>
-	<p><b>This is a paragraph with bold type.</b></p>
-    <p><strong>This is a paragraph with strong type.</strong></p>
-
-    <div1>
-        Local: <span id="local"></span>
-    </div1>
-    <br></br>
-    <div1>
-        Session: <span id="session"></span>
-    </div1>
-    <br></br>
-    <div1>
-        Name: <input type="text" id="data" />
-        <button type="button" onclick="saveData();">Save Data</button>
-        <button type="button" onclick="displayData();">Display Data</button>
-    </div1>
-
-    <script>
-        function saveData() {
-            var data = document.getElementById("data").value;
-            localStorage.setItem("data", data);
-            sessionStorage.setItem("data", data);
-        }
-
-        function displayData() {
-            var local = localStorage.getItem("data");
-            document.getElementById("local").innerHTML = local;
-
-            var session = sessionStorage.getItem("data");
-            document.getElementById("session").innerHTML = session;
-        }
-    </script>
-
-    <br></br>
-
-    <input type="button" value="Click Me" onclick="writetext()">
-	
-	<br></br>
-	
-	<audio src="Some Day.mp3" controls></audio>
-
-    <br></br>
+        <nav>
+            <a href="index.html" id="home" class="nav">HOME</a>|
+            <a href="cv.html" id="cv" class="nav">CV</a>|
+            <a href="contact.html" id="contact" class="nav">CONTACT</a>
+        </nav>
         
-	<p>SVG = Scalar Vector Graphics</p>
-	<svg height="400px" width="100px">
-		<rect id="myRect" height="100px" width="100px" fill="blue"/>
-	</svg>
-
-    <canvas id="myCanvas" width="300" height="300" style="border:3px solid #c3c3c3;">
-            Canvas is not supported on this browser or in this mode
-    </canvas>
-     
-    <script>
-    var canvas = document.getElementById("myCanvas");
-    //  if the canvas element exists 
-    if (canvas.getContext) {
-        // Draw some rectangles with different color values
-        var ctx = canvas.getContext("2d");
-        ctx.fillStyle = "red";
-        ctx.fillRect(5, 5, 200, 200);
-        ctx.fillStyle = "rgba(0,50,200,0.5)";
-        ctx.fillRect(55, 55, 200, 200);
-        ctx.fillStyle = "rgba(0,255,10,0.5)";
-        ctx.fillRect(100, 100, 200, 200);
-    }
-    </script>
-
-    <div>
-        <img src="harley-quinn-amazing-art-hd.jpg" alt="Background image">
-    </div>
-    <footer>
-            <h1>This is the footer.</h1>
-    </footer>
-</body>
-
+        <footer>
+                <h1>by Brad Bass 2017</h1>
+        </footer>
+        
+    </body>
 </html>
