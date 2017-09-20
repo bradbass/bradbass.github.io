@@ -7,14 +7,18 @@
         #myFlexbox {
             display: -ms-flexbox;
             -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
             -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
             background: grey;
             height: auto;
         }
         #myFlexbox {
             display: -webkit-flex;
             -webkit-flex-direction: row;
+            flex-direction: row;
             -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
             background: grey;
             height: auto;
         }
@@ -42,41 +46,29 @@
         }
         #item1 {
             background: orange;
-            -ms-grid-row: 1;
+            grid-row: 1;
+            grid-column: 1;
+            -ms-grid-row: 1;            
             -ms-grid-column: 1;
+            -webkit-grid-row: 1;
+            -webkit-grid-column: 1;            
         }
         #item2 {
             background: purple;
-            -ms-grid-row: 2;
+            grid-row: 2;
+            grid-column: 2;
+            -ms-grid-row: 2;            
             -ms-grid-column: 2;
+            -webkit-grid-row: 2;
+            -webkit-grid-column: 2;            
         }
         #content {
             -ms-flow-into: main;
+            -webkit-flow-into: main;
         }
         .region {
             -ms-flow-from: main;
             -ms-region-fragment: auto;
-            overflow: visible;
-            background: #0ff;
-            width: 150px;
-            height: 200px;
-            float: left;
-            margin: 20px;
-        }
-		#item1 {
-            background: orange;
-            -webkit-grid-row: 1;
-            -webkit-grid-column: 1;
-        }
-        #item2 {
-            background: purple;
-            -webkit-grid-row: 2;
-            -webkit-grid-column: 2;
-        }
-        #content {
-            -webkit-flow-into: main;
-        }
-        .region {
             -webkit-flow-from: main;
             -webkit-region-fragment: auto;
             overflow: visible;
