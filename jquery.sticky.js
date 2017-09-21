@@ -60,7 +60,7 @@
               .css({
                 'width': '',
                 'position': '',
-                'opacity': '0.8',
+                'opacity': '0.8', //added opacity here due to an issue returning to original state
                 'top': '',
                 'z-index': ''
               });
