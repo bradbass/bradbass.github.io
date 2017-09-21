@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
         <script type="text/javascript" src="Scripts.js"></script>
+        <script type="text/javascript" src="jquery.sticky.js"></script>
+        <script>
+          $(window).load(function(){
+            $("#navbar1").sticky({ topSpacing: 10 });
+          });
+        </script>
         <meta charset="utf-8"/>
         <title>Brad's CV - CV</title>
         <link type="text/css" href="demoSite1.css" rel="stylesheet">
@@ -19,7 +26,7 @@
             </h1>
         </header>
 
-        <nav>
+        <nav id="navbar1">
             <a href="index.html" id="home" class="nav">HOME</a>|
             <a href="cv.html" id="cv" class="nav">CV</a>|
             <a href="contact.html" id="contact" class="nav">CONTACT</a>

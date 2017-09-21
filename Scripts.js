@@ -1,3 +1,17 @@
+function submitcontact() {
+    // do something.
+    var name = document.getElementById('contactname').value;
+    var email = document.getElementById('contactemail').value;
+    var subject = document.getElementById('contactsubject').value;
+    var msg = document.getElementById('contactmsg').value;
+
+    var body = name + "\n\n" + email + "\n\n" + msg;
+
+    var request = 'mailto:brad.bass@hotmail.ca?subject=' + subject + '&body=' + body;
+
+    window.open(request);
+}
+
 function writetext() {
     alert("Hello, World!");
 }
@@ -37,18 +51,4 @@ function gpslookup() {
         function errorCallback() {
             messageDiv.innerHTML = 'There was an error looking up your position';
         }	
-}
-
-function submitcontact() {
-    // do something.
-    var name = document.getElementById('contactname').value;
-    var email = document.getElementById('contactemail').value;
-    var subject = document.getElementById('contactsubject').value;
-    var msg = document.getElementById('contactmsg').value;
-
-    var body = name + "\n\n" + email + "\n\n" + msg;
-
-    var request = 'mailto:brad.bass@hotmail.ca?subject=' + subject + '&body=' + body;
-
-    window.open(request);
 }

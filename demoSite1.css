@@ -7,9 +7,9 @@ body {
     background-color: rgb(40, 40, 40);
     color: #AAAAAA;
     font-family: 'Play', sans-serif;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin: 0px;
     opacity: 0.9;
+    padding: 0px;
 }
 
 header {
@@ -29,7 +29,7 @@ html {
 
 h1 {
     padding-bottom: 20px;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 h3 {
@@ -54,7 +54,7 @@ nav > a:active {
 }
 
 nav {
-    background-color: #616161;
+    background-color: #505050;
     border-radius: 10px;
     padding: 15px;
     position: relative;
@@ -184,6 +184,10 @@ footer {
 #mainbodyhome {
     width: 650px;
     margin-left: 20px;
+}
+
+#navbar1 {
+    width: 970px;
 }
 
 #surname {
