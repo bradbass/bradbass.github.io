@@ -181,6 +181,10 @@ footer {
     margin-right: 200px;
 }
 
+#homepagetable {
+    margin-top: -20px;
+}
+
 #mainbodyhome {
     width: 650px;
     margin-left: 20px;
@@ -220,6 +224,7 @@ footer {
     position: relative;
     margin-bottom: 40px;
     margin-left: 20px;
+    border: 0;
 }
 
 .hometable th {
