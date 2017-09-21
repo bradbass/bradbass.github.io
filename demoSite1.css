@@ -215,6 +215,10 @@ footer {
     border: none;
 }
 
+.forminput:focus {
+    background-color: lightgreen;
+}
+
 .greenlabel {
     color: #5EBC60;
 }
