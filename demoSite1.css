@@ -221,8 +221,19 @@ footer {
     font-size: 0.25em;
 }
 
+#testPageWarning {
+    position: relative;
+    top: -80px;
+}
+
 #typed {
     color: lightgreen;
+}
+
+#typedSection {
+    position: relative;
+    top: -60px;
+    height: 20px;
 }
 
 .code {
