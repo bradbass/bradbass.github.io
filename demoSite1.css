@@ -92,6 +92,16 @@ footer {
     font-size: 2.5em;
 }
 
+#btnGroup {
+    margin-left: 100px;
+}
+
+#canvas {
+    background-color: white;
+    border: 2px solid black;
+    margin-left: 100px;
+}
+
 #contactflexbox {
     display: flex;
     flex-direction: column;
@@ -205,6 +215,10 @@ footer {
 
 #smallheadingtext {
     font-size: 0.25em;
+}
+
+#typed {
+    color: lightgreen;
 }
 
 .code {
