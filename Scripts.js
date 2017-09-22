@@ -53,6 +53,30 @@ function gamearea() {
     }
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+document.onkeydown = async function getKeyPress() {
+    // get key pressed by user.  If its an arrow key or wasd then move the gamepiece.
+    var key = event.key;
+    if (key == "ArrowUp" || key == "w") {
+        btnUp();
+    } else if (key == "ArrowDown" || key == "s") {
+        btnDown();
+    } else if (key == "ArrowLeft" || key == "a") {
+        btnLeft();
+    } else if (key == "ArrowRight" || key == "d") {
+        btnRight();
+    }
+}
+
+document.onkeyup = async function stopMoving() {
+    //reset gamepiece speed when unclick button
+    myGamePiece.speedX = 0; 
+    myGamePiece.speedY = 0;
+}
+
 function drawMaze() {
     //draw the maze
     var myCanvas = document.getElementById("canvas");
@@ -110,6 +134,13 @@ function component(width, height, color, x, y, type) {
             ctx.fillRect(this.x, this.y, this.width, this.height);
         }
     }
+    var myleft = this.x;
+    var myright = this.x + (this.width);
+    var mytop = this.y;
+    var mybottom = this.y + (this.height);
+    // if ((mybottom >= this.canvas.height) || (mytop <= 0) || (myright >= this.canvas.width) || (myleft <= 0)) {
+    //     restartGame();
+    // }
 }
 
 function updateGameArea() {
@@ -130,7 +161,7 @@ function updateGameArea() {
         }
         myGamePiece.x += myGamePiece.speedX;
         myGamePiece.y += myGamePiece.speedY;    
-        myGamePiece.update();
+        myGamePiece.update();        
         drawMaze();
     }
 }
@@ -140,7 +171,7 @@ function everyinterval(n) {
     return false;
 }
 
-function btnUp(e) {
+function btnUp() {
     //move gamepiece up
     myGamePiece.speedY = -1; 
 }
@@ -160,7 +191,7 @@ function btnRight() {
     myGamePiece.speedX = 1; 
 }
 
-function clearMove(e) {
+function clearMove() {
     //reset gamepiece speed when unclick button
     myGamePiece.speedX = 0; 
     myGamePiece.speedY = 0; 
