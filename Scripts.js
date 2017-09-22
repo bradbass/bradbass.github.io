@@ -14,27 +14,21 @@ function submitcontact() {
 
 var myGameArea;
 var myGamePiece;
-var myObstacles = [];
-var myscore;
-
-function restartGame() {
-    //clear everything so we can start a new game
-    myGameArea.stop();
-    myGameArea.clear();
-    myGameArea = {};
-    myGamePiece = {};
-    myObstacles = [];
-    myscore = {};
-    document.getElementById("canvasContainer").innerHTML = "";
-    startGame()
-}
 
 function startGame() {
     //create gamearea, gamepiece and scoreboard and then start the game
     myGameArea = new gamearea();
-    myGamePiece = new component(30, 30, "red", 10, 75);
-    myscore = new component("15px", "Consolas", "black", 220, 25, "text");
+    myGamePiece = new component(30, 30, "red", 2, 2);
     myGameArea.start();
+}
+
+function restartGame() {
+    myGameArea.stop();
+    myGameArea.clear();
+    myGameArea = {};
+    myGamePiece = {};
+    document.getElementById("canvasContainer").innerHTML = "";
+    startGame()
 }
 
 function gamearea() {
@@ -59,13 +53,47 @@ function gamearea() {
     }
 }
 
+function drawMaze() {
+    //draw the maze
+    var myCanvas = document.getElementById("canvas");
+    ctx = myCanvas.getContext("2d");
+    ctx.beginPath();
+    ctx.moveTo(40, 0);
+    ctx.lineTo(40, 80);
+    ctx.lineTo(80, 80);
+    ctx.lineTo(80, 120);
+    ctx.moveTo(40,180);
+    ctx.lineTo(40, 120);
+    ctx.moveTo(80, 180);
+    ctx.lineTo(80, 160);
+    ctx.moveTo(120, 180);
+    ctx.lineTo(120, 40);
+    ctx.lineTo(80, 40);
+    ctx.moveTo(160, 0);
+    ctx.lineTo(160, 120);
+    ctx.lineTo(200, 120);
+    ctx.lineTo(200, 140)
+    ctx.moveTo(160, 180);
+    ctx.lineTo(160, 160);
+    ctx.moveTo(240, 180);
+    ctx.lineTo(240, 80);
+    ctx.lineTo(200, 80);
+    ctx.lineTo(200, 40);
+    ctx.moveTo(240, 0);
+    ctx.lineTo(240, 40);
+    ctx.moveTo(280, 0);
+    ctx.lineTo(280, 140);
+    ctx.strokeStyle = "red";
+    ctx.stroke();
+}
+
 function component(width, height, color, x, y, type) {
     //draw the game piece, update position and check for collisions
     this.type = type;
     if (type == "text") {
         this.text = color;
-    }
-    this.score = 0;    this.width = width;
+    }  
+    this.width = width;
     this.height = height;
     this.speedX = 0;
     this.speedY = 0;    
@@ -82,39 +110,14 @@ function component(width, height, color, x, y, type) {
             ctx.fillRect(this.x, this.y, this.width, this.height);
         }
     }
-    //collision detection
-    this.crashWith = function(otherobj) {
-        var myleft = this.x;
-        var myright = this.x + (this.width);
-        var mytop = this.y;
-        var mybottom = this.y + (this.height);
-        var otherleft = otherobj.x;
-        var otherright = otherobj.x + (otherobj.width);
-        var othertop = otherobj.y;
-        var otherbottom = otherobj.y + (otherobj.height);
-        var crash = true;
-        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
-            crash = false;
-        }
-        return crash;
-    }
 }
 
 function updateGameArea() {
-    //draw the game area and obstacles
+    //draw the game area
     var x, y, min, max, height, gap;
-    for (i = 0; i < myObstacles.length; i += 1) {
-        if (myGamePiece.crashWith(myObstacles[i])) {
-            myGameArea.stop();
-            document.getElementById("myfilter").style.display = "block";
-            document.getElementById("myrestartbutton").style.display = "block";
-            return;
-        } 
-    }
     if (myGameArea.pause == false) {
         myGameArea.clear();
-        myGameArea.frameNo += 1;
-        myscore.score +=1;        
+        myGameArea.frameNo += 1;      
         if (myGameArea.frameNo == 1 || everyinterval(150)) {
             x = myGameArea.canvas.width;
             y = myGameArea.canvas.height - 100;
@@ -124,18 +127,11 @@ function updateGameArea() {
             min = 50;
             max = 100;
             gap = Math.floor(Math.random()*(max-min+1)+min);
-            myObstacles.push(new component(10, height, "green", x, 0));
-            myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
         }
-        for (i = 0; i < myObstacles.length; i += 1) {
-            myObstacles[i].x += -1;
-            myObstacles[i].update();
-        }
-        myscore.text="SCORE: " + myscore.score;        
-        myscore.update();
         myGamePiece.x += myGamePiece.speedX;
         myGamePiece.y += myGamePiece.speedY;    
         myGamePiece.update();
+        drawMaze();
     }
 }
 
