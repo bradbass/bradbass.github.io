@@ -18,7 +18,7 @@ var myGamePiece;
 function startGame() {
     //create gamearea, gamepiece and scoreboard and then start the game
     myGameArea = new gamearea();
-    myGamePiece = new component(30, 30, "red", 2, 2);
+    myGamePiece = new component(20, 20, "red", 2, 2);
     myGameArea.start();
 }
 
