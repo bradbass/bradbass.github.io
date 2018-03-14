@@ -87,6 +87,11 @@ function prettyLog(str) {
   console.log('%c ' + str, 'color: green; font-weight: bold;');
 }
 
+function resizeImage(img) {
+  img.style.width = "500px";
+  img.style.height = "500px";
+}
+
 function toggleLoop(typed) {
   if (typed.loop) {
     typed.loop = false;
