@@ -289,13 +289,13 @@ footer {
 }
 
 .rRack {
-    width: 350px; 
-    height: 320px;
+    width: 350px;
+    height: 260px;
 }
 
 .rRack:hover {
     width: 560px;
-    height: 514px;
+    height: 420px;
 }
 
 .svg-wrapper {
