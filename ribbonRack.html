@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="Scripts.js"></script>
+        <script type="text/javascript" src="jquery.sticky.js"></script>
+        <script src="typed.min.js" type="text/javascript"></script>
+        <script src="demos.js"></script>
+        <script>
+          $(window).load(function(){
+            $("#navbar1").sticky({ topSpacing: 10 });
+          });          
+        </script>
+        <meta charset="utf-8"/>
+        <title>Brad's CV - TestPage</title>
+        <link type="text/css" href="demoSite1.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+        <style>
+            #testpage {color: #5EBC60;} 
+            
+            /* CheckBox Hack */
+
+            input[type=checkbox] {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            label {  
+              cursor: pointer;
+            }
+
+            input[type=checkbox]:checked ~ img {
+                width: 600px;
+                height: 550px;
+            }
+        </style>
+    </head>
+
+    <body onload="startGame()">
+        
+        <header>
+            <h1>
+                <span id="firstname">Brad</span> <span id="surname">Bass</span> <span id="smallheadingtext"><sup>tester/developer for hire</sup></span>
+            </h1>
+        </header>
+
+        <nav id="navbar1">
+            <a href="index.html" id="home" class="nav">HOME</a>|
+            <a href="cv.html" id="cv" class="nav">CV</a>|
+            <a href="contact.html" id="contact" class="nav">CONTACT</a>|
+            <a href="testpage.html" id="testpage" class="nav">TESTPAGE</a>|
+            <a href="ribbonRack.html" id="testpage" class="nav">TESTPAGE2</a>
+        </nav>
+
+        <section id="testPageWarning">
+          <h2><strong>Page is best viewed with Chrome or Firefox.</strong></h2>
+        </section>
+
+        <section id="ribbonRack">
+          <h2>Ribbon Rack</h2>
+          <hr>
+          <br>
+          <!-- <div class="rack"> -->
+            <label for="toggle-1">
+              <input type="checkbox" id="toggle-1">
+              <img class="rRack" src="https://i.imgur.com/v1pPHGN.png" alt="Some image" />
+            </label>
+        </section>
+       
+        <footer>
+          <h1>&copy; 2017 by Brad Bass</h1>
+        </footer>
+        
+    </body>
+</html>
