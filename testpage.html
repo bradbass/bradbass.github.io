@@ -16,7 +16,26 @@
         <link type="text/css" href="demoSite1.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
         <style>
-            #testpage {color: #5EBC60;}            
+            #testpage {color: #5EBC60;} 
+            
+            /* CheckBox Hack */
+
+            input[type=checkbox] {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            label { 
+              -webkit-appearance: push-button;
+              -moz-appearance: button; 
+              cursor: pointer;
+            }
+
+            input[type=checkbox]:checked ~ div {
+                width: 600px;
+                height: 550px;
+            }
         </style>
     </head>
 
