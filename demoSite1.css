@@ -74,6 +74,26 @@ footer {
     padding-top: 4px;
 }
 
+/* CheckBox Hack */
+
+input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+label { 
+   -webkit-appearance: push-button;
+   -moz-appearance: button; 
+   display: inline-block;
+   margin: 60px 0 10px 0;
+   cursor: pointer;
+}
+
+input[type=checkbox]:checked ~ div {
+    width: 600px;
+    height: 550px;}
+
 #addressdetails {
     line-height: 4px;
 }
@@ -293,10 +313,10 @@ footer {
     height: 260px;
 }
 
-.rRack:hover {
-    width: 560px;
-    height: 420px;
-}
+/* .rRack:hover {
+    width: 600px;
+    height: 550px;
+} */
 
 .svg-wrapper {
     height: 60px;
