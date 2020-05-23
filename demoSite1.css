@@ -289,14 +289,14 @@ footer {
 }
 
 .rRack {
-    width: 300px; 
-    height: 250px;
+    width: 344px;
+    height: 393px;
 }
 
-.rRack:hover {
-    width: 540px;
-    height: 450px;
-}
+/* .rRack:hover {
+    width: 600px;
+    height: 550px;
+} */
 
 .svg-wrapper {
     height: 60px;

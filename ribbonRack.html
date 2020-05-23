@@ -16,7 +16,24 @@
         <link type="text/css" href="demoSite1.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
         <style>
-            #testpage {color: #5EBC60;} 
+            #testpage2 {color: #5EBC60;} 
+            
+            /* CheckBox Hack */
+
+            input[type=checkbox] {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            label {  
+              cursor: pointer;
+            }
+
+            input[type=checkbox]:checked ~ img {
+                width: 906px;
+                height: 1035px;
+            }
         </style>
     </head>
 
@@ -40,41 +57,15 @@
           <h2><strong>Page is best viewed with Chrome or Firefox.</strong></h2>
         </section>
 
-        <section id="typedSection">
-          <div class="type-wrap">
-            <div id="typed-strings">
-              <h3>public static void main(String[] args){<br>
-              <span style="margin-left: 1em">System.out.println("Hello!\nI'm available for hire! ;)");</span>
-              <br>}</h3>
-            </div>
-          </div>
-          <span id="typed"></span>
-        </section>
-
-        <section id="canvasSection">
-          <h2>Canvas</h2>
-          <hr>
-          <div id="canvasContainer"></div>
-          <br>
-          <div id="btnGroup">
-            <button id="btnUp" class="btn" onmousedown="btnUp()" onmouseup="clearMove()">Up</button>
-            <button id="btnDown" class="btn" onmousedown="btnDown()" onmouseup="clearMove()">Down</button>
-            <button id="btnLeft" class="btn" onmousedown="btnLeft()" onmouseup="clearMove()">Left</button>
-            <button id="btnRight" class="btn" onmousedown="btnRight()" onmouseup="clearMove()">Right</button>
-            <button id="btnRestart" class="btn" onclick="restartGame()">Restart</button>
-          </div>
-        </section>
-
-        <section id="svg">
-          <h2>SVG</h2> 
+        <section id="ribbonRack">
+          <h2>Ribbon Rack</h2>
           <hr>
           <br>
-          <div class="svg-wrapper">
-            <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-              <rect class="shape" height="60" width="320" />
-            </svg>
-            <div id="hoverText" class="text">HOVER</div>
-          </div>         
+          <!-- <div class="rack"> -->
+            <label for="toggle-1">
+                <input type="checkbox" id="toggle-1">
+                <img class="rRack" src="https://i.imgur.com/Bnz34wp.png" alt="Some image" />
+            </label>
         </section>
        
         <footer>
