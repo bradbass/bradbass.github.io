@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="Scripts.js"></script>
+        <script type="text/javascript" src="jquery.sticky.js"></script>
+        <script src="typed.min.js" type="text/javascript"></script>
+        <script src="demos.js"></script>
+        <script>
+          $(window).load(function(){
+            $("#navbar1").sticky({ topSpacing: 10 });
+          });          
+        </script>
+        <meta charset="utf-8"/>
+        <title>Brad's CV - TestPage</title>
+        <link type="text/css" href="demoSite1.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+        <style>
+            #testpage2 {color: #5EBC60;} 
+            
+            /* CheckBox Hack */
+
+            input[type=checkbox] {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            label {  
+              cursor: pointer;
+            }
+
+            input[type=checkbox]:checked ~ img {
+                width: 906px;
+                height: 1035px;
+            }
+        </style>
+    </head>
+       
+        <header>
+            <h1>
+                <span id="firstname">Brad</span> <span id="surname">Bass</span> <span id="smallheadingtext"><sup>tester/developer for hire</sup></span>
+            </h1>
+        </header>
+
+        <nav id="navbar1">
+            <a href="index.html" id="home" class="nav">HOME</a>|
+            <a href="cv.html" id="cv" class="nav">CV</a>|
+            <a href="contact.html" id="contact" class="nav">CONTACT</a>|
+            <a href="testpage.html" id="testpage" class="nav">TESTPAGE</a>|
+            <a href="ribbonRack.html" id="testpage2" class="nav">TESTPAGE2</a>
+        </nav>
+
+        <section id="testPageWarning">
+          <h2><strong>Page is best viewed with Chrome or Firefox.</strong></h2>
+        </section>
+
+        <section id="mazeGame">
+          <h2>Maze Game</h2>
+          <hr>
+          <br>
+          <div>
+            <canvas id="canvas" width="482" height="482">
+            This text is displayed if your browser does not support HTML5 Canvas.
+            </canvas>
+            </div>
+            
+            <script type="text/javascript">
+            var canvas;
+            var ctx;
+            var dx = 5;
+            var dy = 5;
+            var x = 200;
+            var y = 5;
+            var WIDTH = 482;
+            var HEIGHT = 482;
+            var img = new Image();
+            var collision = 0;
+            
+            function rect(x,y,w,h) {
+            ctx.beginPath();
+            ctx.rect(x,y,w,h);
+            ctx.closePath();
+            ctx.fill();
+            }
+            
+            function clear() {
+            ctx.clearRect(0, 0, WIDTH, HEIGHT);
+            ctx.drawImage(img, 0, 0);
+            }
+            
+            function init() {
+            canvas = document.getElementById("canvas");
+            ctx = canvas.getContext("2d");
+            img.src = "maze.gif";
+            return setInterval(draw, 10);
+            }
+            
+            function doKeyDown(evt){
+            switch (evt.keyCode) {
+            case 38:  /* Up arrow was pressed */
+            case 87:
+            if (y - dy > 0){
+            y -= dy;
+            clear();
+            checkcollision();
+            if (collision == 1){
+            y += dy;
+            collision = 0;
+            }
+            }
+            
+            break;
+            case 40:  /* Down arrow was pressed */
+            case 83:
+            if (y + dy < HEIGHT ){
+            y += dy;
+            clear();
+            checkcollision();
+            if (collision == 1){
+            y -= dy;
+            collision = 0;
+            }
+            }
+            
+            break;
+            case 37:  /* Left arrow was pressed */
+            case 65:
+            if (x - dx > 0){
+            x -= dx;
+            clear();
+            checkcollision();
+            if (collision == 1){
+            x += dx;
+            collision = 0;
+            }
+            }
+            break;
+            case 39:  /* Right arrow was pressed */
+            case 68:
+            if ((x + dx < WIDTH)){
+            x += dx;
+            clear();
+            checkcollision();
+            if (collision == 1){
+            x -= dx;
+            collision = 0;
+            }
+            }
+            break;
+            }
+            }
+            
+            function checkcollision() {
+            var imgd = ctx.getImageData(x, y, 15, 15);
+            var pix = imgd.data;
+            for (var i = 0; n = pix.length, i < n; i += 4) {
+            if (pix[i] == 0) {
+            collision = 1;
+            }
+            }
+            }
+            
+            function draw() {
+            clear();
+            ctx.fillStyle = "purple";
+            rect(x, y, 15,15);
+            }
+            
+            init();
+            window.addEventListener('keydown',doKeyDown,true);
+            </script>
+        </section>
+       
+        <footer>
+          <h1>&copy; 2017 by Brad Bass</h1>
+        </footer>
+        
+    </body>
+</html>
